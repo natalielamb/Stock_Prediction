@@ -59,8 +59,8 @@ MODEL_INFO = {
         "endpoint": aws_endpoint,
         "explainer": 'explainer.shap',
         "pipeline": 'finalized_model.tar.gz',
-        "keys": ["BTC-USD", "ETH-USD", "SPY", "GLD", "SP500", "DTWEXBGS", "VIXCLS"],
-        "inputs": [{"name": k, "type": "number", "min": -1.0, "max": 1.0, "default": 0.0, "step": 0.01} for k in ["BTC-USD", "ETH-USD", "SPY", "GLD", "SP500", "DTWEXBGS", "VIXCLS"]]
+        "keys": ["ETH-USD", "SPY", "GLD", "SP500", "DTWEXBGS", "VIXCLS"],
+        "inputs": [{"name": k, "type": "number", "min": -1.0, "max": 1.0, "default": 0.0, "step": 0.01} for k in ["ETH-USD", "SPY", "GLD", "SP500", "DTWEXBGS", "VIXCLS"]]
 }
 
 def load_pipeline(_session, bucket, key):
@@ -151,6 +151,7 @@ if submitted:
         display_explanation(input_df,session, aws_bucket)
     else:
         st.error(res)
+
 
 
 
