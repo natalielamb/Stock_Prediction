@@ -22,7 +22,7 @@ def extract_features():
     END_DATE = datetime.date.today().strftime("%Y-%m-%d")
     stk_tickers = ['BTC-USD', 'ETH-USD', 'SPY', 'GLD']
     ccy_tickers = ['DTWEXBGS']
-    idx_tickers = [''SP500', 'VIXCLS']
+    idx_tickers = ['SP500', 'VIXCLS']
     
     stk_data = yf.download(stk_tickers, start=START_DATE, end=END_DATE, auto_adjust=False)
     #stk_data = web.DataReader(stk_tickers, 'yahoo')
@@ -66,5 +66,6 @@ def get_bitcoin_historical_prices(days = 60):
     df['Date'] = pd.to_datetime(df['Timestamp'], unit='ms').dt.normalize()
     df = df[['Date', 'Close Price (USD)']].set_index('Date')
     return df
+
 
 
