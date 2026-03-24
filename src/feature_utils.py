@@ -14,13 +14,13 @@ import sys
 
 # ... continue with your script ...
 
-def extract_features():
+def extract_features_pair():
 
     return_period = 5
     
     START_DATE = (datetime.date.today() - datetime.timedelta(days=365)).strftime("%Y-%m-%d")
     END_DATE = datetime.date.today().strftime("%Y-%m-%d")
-    stk_tickers = ['MPWR', 'AAPL'] #['BTC-USD', 'ETH-USD', 'SPY', 'GLD']
+    stk_tickers = ['GOOGL', 'CBRE'] #['BTC-USD', 'ETH-USD', 'SPY', 'GLD']
     #ccy_tickers = ['DTWEXBGS']
     #idx_tickers = ['SP500', 'VIXCLS']
     
